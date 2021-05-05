@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E5870022642E0CE00CC7679 /* AlamofireNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5870012642E0CE00CC7679 /* AlamofireNetworkRequest.swift */; };
 		5EFAD585263EF41600DF97A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFAD584263EF41600DF97A1 /* AppDelegate.swift */; };
 		5EFAD587263EF41600DF97A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFAD586263EF41600DF97A1 /* SceneDelegate.swift */; };
 		5EFAD589263EF41600DF97A1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFAD588263EF41600DF97A1 /* MainViewController.swift */; };
@@ -16,10 +17,11 @@
 		5EFAD59A263EF8B300DF97A1 /* JokesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFAD599263EF8B300DF97A1 /* JokesViewController.swift */; };
 		5EFAD5A5263F443A00DF97A1 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFAD5A4263F443A00DF97A1 /* Joke.swift */; };
 		5EFAD5AB263F47FC00DF97A1 /* JokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFAD5AA263F47FC00DF97A1 /* JokeCell.swift */; };
-		5EFAD5B0263F570100DF97A1 /* NetworkJokeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFAD5AF263F570100DF97A1 /* NetworkJokeManager.swift */; };
+		B1E55FD1E70B9BADBDED65B7 /* Pods_Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 803C7FA9302BDA8507CDAD2A /* Pods_Networking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E5870012642E0CE00CC7679 /* AlamofireNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireNetworkRequest.swift; sourceTree = "<group>"; };
 		5EFAD581263EF41600DF97A1 /* Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Networking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EFAD584263EF41600DF97A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EFAD586263EF41600DF97A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,7 +33,9 @@
 		5EFAD599263EF8B300DF97A1 /* JokesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesViewController.swift; sourceTree = "<group>"; };
 		5EFAD5A4263F443A00DF97A1 /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
 		5EFAD5AA263F47FC00DF97A1 /* JokeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeCell.swift; sourceTree = "<group>"; };
-		5EFAD5AF263F570100DF97A1 /* NetworkJokeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkJokeManager.swift; sourceTree = "<group>"; };
+		803C7FA9302BDA8507CDAD2A /* Pods_Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA68720B31F431BD40473727 /* Pods-Networking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.debug.xcconfig"; path = "Target Support Files/Pods-Networking/Pods-Networking.debug.xcconfig"; sourceTree = "<group>"; };
+		CE3EEDA0AB6F32BD8F1056CB /* Pods-Networking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.release.xcconfig"; path = "Target Support Files/Pods-Networking/Pods-Networking.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1E55FD1E70B9BADBDED65B7 /* Pods_Networking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5BB9C37B7F6D77CED355A469 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BA68720B31F431BD40473727 /* Pods-Networking.debug.xcconfig */,
+				CE3EEDA0AB6F32BD8F1056CB /* Pods-Networking.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		5EFAD578263EF41600DF97A1 = {
 			isa = PBXGroup;
 			children = (
 				5EFAD583263EF41600DF97A1 /* Networking */,
 				5EFAD582263EF41600DF97A1 /* Products */,
+				5BB9C37B7F6D77CED355A469 /* Pods */,
+				B1282F44A03D92D69D6B321D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,7 +83,7 @@
 				5EFAD584263EF41600DF97A1 /* AppDelegate.swift */,
 				5EFAD586263EF41600DF97A1 /* SceneDelegate.swift */,
 				5EFAD588263EF41600DF97A1 /* MainViewController.swift */,
-				5EFAD5AF263F570100DF97A1 /* NetworkJokeManager.swift */,
+				5E5870012642E0CE00CC7679 /* AlamofireNetworkRequest.swift */,
 				5EFAD599263EF8B300DF97A1 /* JokesViewController.swift */,
 				5EFAD5AA263F47FC00DF97A1 /* JokeCell.swift */,
 				5EFAD5A4263F443A00DF97A1 /* Joke.swift */,
@@ -79,6 +95,14 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		B1282F44A03D92D69D6B321D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				803C7FA9302BDA8507CDAD2A /* Pods_Networking.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5EFAD595263EF41800DF97A1 /* Build configuration list for PBXNativeTarget "Networking" */;
 			buildPhases = (
+				E741EB1EB1C333BC91C7FE9A /* [CP] Check Pods Manifest.lock */,
 				5EFAD57D263EF41600DF97A1 /* Sources */,
 				5EFAD57E263EF41600DF97A1 /* Frameworks */,
 				5EFAD57F263EF41600DF97A1 /* Resources */,
+				3DA2198F26478E2B795BE637 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -144,6 +170,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3DA2198F26478E2B795BE637 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Networking/Pods-Networking-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Networking/Pods-Networking-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Networking/Pods-Networking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E741EB1EB1C333BC91C7FE9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Networking-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5EFAD57D263EF41600DF97A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -152,9 +220,9 @@
 				5EFAD5AB263F47FC00DF97A1 /* JokeCell.swift in Sources */,
 				5EFAD59A263EF8B300DF97A1 /* JokesViewController.swift in Sources */,
 				5EFAD589263EF41600DF97A1 /* MainViewController.swift in Sources */,
+				5E5870022642E0CE00CC7679 /* AlamofireNetworkRequest.swift in Sources */,
 				5EFAD585263EF41600DF97A1 /* AppDelegate.swift in Sources */,
 				5EFAD587263EF41600DF97A1 /* SceneDelegate.swift in Sources */,
-				5EFAD5B0263F570100DF97A1 /* NetworkJokeManager.swift in Sources */,
 				5EFAD5A5263F443A00DF97A1 /* Joke.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +367,7 @@
 		};
 		5EFAD596263EF41800DF97A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA68720B31F431BD40473727 /* Pods-Networking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -318,6 +387,7 @@
 		};
 		5EFAD597263EF41800DF97A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE3EEDA0AB6F32BD8F1056CB /* Pods-Networking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

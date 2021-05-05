@@ -11,10 +11,14 @@ class JokesViewController: UITableViewController {
     
     var jokes: [Joke] = []
     
+    private var activityIndicator = UIActivityIndicatorView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 120
+        tableView.rowHeight = 100
         
+        activityIndicator = showSpinner(in: tableView)
+        activityIndicator.startAnimating()
     }
     
     // MARK: - Table view data source
@@ -28,29 +32,30 @@ class JokesViewController: UITableViewController {
         cell.configure(with: joke)
         return cell
     }
-}
-
-//MARK: - Networking
-extension JokesViewController {
     
-    func fetchJokes() {
-        guard let url = URL(string: "https://official-joke-api.appspot.com/jokes/ten")
-        else { return }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func fetchDataWithAlamofire() {
+        AlamofireNetworkRequest.shared.fetchJokes(url: URLS.jokesURL.rawValue) { (jokes) in
+            self.jokes = jokes
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                self.activityIndicator.stopAnimating()
+            }
+        }
+    }
+    
+    private func showSpinner(in view: UIView) -> UIActivityIndicatorView {
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.color = .gray
+        activityIndicator.startAnimating()
+        activityIndicator.center = view.center
+        activityIndicator.hidesWhenStopped = true
         
-        URLSession.shared.dataTask(with: url) { (data, _, error) in
-            guard let data = data else {
-                print(error?.localizedDescription ?? "No error description")
-                return
-            }
-            
-            do {
-                self.jokes = try JSONDecoder().decode([Joke].self, from: data)
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            } catch let error {
-                print(error.localizedDescription)
-            }
-        }.resume()
+        view.addSubview(activityIndicator)
+        
+        return activityIndicator
     }
 }
